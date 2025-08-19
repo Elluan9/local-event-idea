@@ -1,0 +1,42 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Node
+node_modules/
+**/node_modules/
+
+# Builds / caches
+dist/
+web/dist/
+.vercel/
+.netlify/
+.next/
+.cache/
+
+# Env / secrets (never commit)
+.env
+.env.*
+!/.env.example
+web/.env*
+!web/.env.example
+api/.dev.vars
+api/.env
+api/.env.*
+!api/.dev.vars.example
+
+# Wrangler local state
+.wrangler/
+
+# Backups
+web.bak/
+
+# Local secrets
+api/.dev.vars
+web/.env.local

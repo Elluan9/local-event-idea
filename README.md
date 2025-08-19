@@ -1,0 +1,21 @@
+# Local Event Idea Generator (AI + Places + Weather)
+
+Suggests nearby plans (bars, restaurants, simple activities) using **OpenAI structured outputs** + **Google Places (New)** + **Open-Meteo**.  
+Backend: Cloudflare Worker (Hono). Frontend: React + Vite + Tailwind.
+
+## Stack
+- OpenAI Responses API (strict `json_schema` outputs)
+- Google Places API (New v1, field masks)
+- Open-Meteo Weather (no key)
+- Cloudflare Workers (Hono) + React/Vite/Tailwind
+
+## Local setup
+
+**Prereqs:** Node 18+, `npm i -g wrangler`
+
+### 1) API (Cloudflare Worker)
+```bash
+cd api
+cp .dev.vars.example .dev.vars     # put your own keys in .dev.vars
+npm i
+npm run dev                        # http://127.0.0.1:8787
