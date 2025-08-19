@@ -19,3 +19,8 @@ cd api
 cp .dev.vars.example .dev.vars     # put your own keys in .dev.vars
 npm i
 npm run dev                        # http://127.0.0.1:8787
+# 2) Web
+cd ../web
+cp .env.example .env.local    # points to the local Worker
+npm i
+npm run dev    # http://localhost:5173
