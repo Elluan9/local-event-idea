@@ -13,14 +13,21 @@ Backend: Cloudflare Worker (Hono). Frontend: React + Vite + Tailwind.
 
 **Prereqs:** Node 18+, `npm i -g wrangler`
 
-### 1) API (Cloudflare Worker)
+### 1) API (Cloudflare Worker) 
 ```bash
 cd api
 cp .dev.vars.example .dev.vars     # put your own keys in .dev.vars
 npm i
 npm run dev                        # http://127.0.0.1:8787
-# 2) Web
+
+### 2) Web 
 cd ../web
 cp .env.example .env.local    # points to the local Worker
 npm i
 npm run dev    # http://localhost:5173
+
+
+### 3) Commit & push
+git add .
+git commit -m "Initial public, no secrets"
+gh repo create local-event-idea --public --source=. --push  # (or use GitHub UI)
